@@ -1,0 +1,87 @@
+<header
+    class="sticky top-0 bg-[#101010] flex items-center justify-between sm:px-2 py-3"
+>
+    <h1 id="title" class="text-3xl xl:text-4xl max-sm:pl-4">ArmandoRios</h1>
+    <nav
+        class="hidden header-menu-mobile absolute top-[60px] max-sm:w-full bg-[#101010] border-t border-solid border-white sm:flex item-certer sm:static sm:border-none"
+        id="headerMenu"
+    >
+        <a href="#home">
+            <p
+                class="text-red-700 hover:text-red-200 border-b border-solid border-white sm:border-none p-6 sm:p-0 text-3xl sm:text-xl xl:text-2xl sm:mx-3"
+            >
+                Home
+            </p></a
+        >
+        <a href="#about"
+            ><p
+                class="text-red-700 hover:text-red-200 border-b border-solid border-white sm:border-none p-6 sm:p-0 text-3xl sm:text-xl xl:text-2xl sm:mx-3"
+            >
+                About
+            </p></a
+        >
+        <a href="#portfolio"
+            ><p
+                class="text-red-700 hover:text-red-200 border-b border-solid border-white sm:border-none p-6 sm:p-0 text-3xl sm:text-xl xl:text-2xl sm:mx-3"
+            >
+                Portfolio
+            </p></a
+        >
+        <a href="contact"
+            ><p
+                class="text-red-700 hover:text-red-200 border-b border-solid border-white sm:border-none p-6 sm:p-0 text-3xl sm:text-xl xl:text-2xl sm:mx-3"
+            >
+                Contact
+            </p></a
+        >
+        <a href="#github"
+            ><p
+                class="text-red-700 hover:text-red-200 border-b border-solid border-white sm:border-none p-6 sm:p-0 text-3xl sm:text-xl xl:text-2xl sm:mx-3"
+            >
+                GitHub
+            </p></a
+        >
+    </nav>
+    <button id="menuMobile" class="sm:hidden max-sm:pr-4">
+        <svg
+            class="group-focus:-rotate-90 group-focus:duration-200 material-symbols-outlined scale-150"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            ><path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                fill="currentColor"></path></svg
+        >
+    </button>
+</header>
+
+<script>
+    const menuMobile = document.getElementById("menuMobile");
+    const headerMenu = document.getElementById("headerMenu");
+
+    // Función para ocultar el menú si se hace clic fuera de él
+    function closeMenuOnClickOutside(event) {
+        if (!headerMenu.contains(event.target) && event.target !== menuMobile) {
+            headerMenu.classList.add("hidden");
+            menuMobile.classList.remove("group");
+            // Eliminar el event listener después de ocultar el menú
+            document.removeEventListener("click", closeMenuOnClickOutside);
+        }
+    }
+
+    menuMobile.addEventListener("click", (event) => {
+        event.stopPropagation(); // Evitar que el clic se propague al documento
+        headerMenu.classList.toggle("hidden");
+        menuMobile.classList.toggle("group");
+
+        // Agregar event listener para cerrar el menú si se hace clic en cualquier otro lugar de la página
+        document.addEventListener("click", closeMenuOnClickOutside);
+    });
+
+    const numbers = document.querySelector("#numbers");
+
+    for (let i = 0; i < 100; i++) {
+        numbers.innerHTML += `<p>${i}</p>`;
+    }
+</script>

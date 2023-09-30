@@ -1,0 +1,74 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="google-site-verification"
+            content="L01jBe2dJ-2CWmORDx2KuiGPuh2YLIZljx5kKZYtnrM"
+        />
+        <meta
+            name="description"
+            content="Armando Rios - Desarrollador Web Backend. Explora mi portafolio para descubrir mis proyectos y habilidades en desarrollo de software."
+        />
+        <meta
+            name="keywords"
+            content="Armando Rios, Desarrollador Web, Backend, Portafolio"
+        />
+        <meta name="author" content="Armando Rios" />
+        <meta property="og:title" content="Armando Rios - Portfolio" />
+        <meta
+            property="og:description"
+            content="Armando Rios - Desarrollador Web Backend. Explora mi portafolio para descubrir mis proyectos y habilidades en desarrollo de software."
+        />
+        <meta
+            property="og:image"
+            content="https://th.bing.com/th/id/OIG.dxcZdjlX4VdpVO0nt3sC?pid=ImgGn"
+        />
+        <meta property="og:url" content="https://armandorio.dev" />
+        <link rel="canonical" href="https://armandorio.dev" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="bg-[#101010] text-white font-rios sm:mx-14">
+        <slot />
+    </body>
+</html>
+<style is:global>
+    .animacion {
+        display: block;
+        white-space: nowrap;
+        /* border-right: 4px solid; */
+        width: 21ch;
+        animation:
+            typing 2s steps(21),
+            blink 0.5s infinite step-end alternate;
+        overflow: hidden;
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+    @font-face {
+        font-family: "VT323";
+        src: url("/VT323.ttf") format("truetype");
+        /* Otras propiedades de fuente como font-weight y font-style aquí */
+    }
+</style>

@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Home from "../components/Home.astro";
+import About from "../components/About.astro";
+---
+
+<Layout title="Armando Rios.">
+    <main>
+        <!-- <body class="bg-[#101010] text-white font-rios sm:mx-14"> -->
+        <Header />
+        <Home />
+        <About />
+        <div
+            id="numbers"
+            class="hidden lg:inline-block fixed top-0 left-0 text-xl text-end m-1"
+        >
+        </div>
+    </main>
+</Layout>
