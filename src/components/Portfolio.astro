@@ -1,0 +1,59 @@
+---
+import Subtitle from "./extras/Subtitle.astro";
+import Project from "./extras/Project.astro";
+let text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quidem, ea totam dolorem nihil debitis voluptatum quasi optio? Minima'
+const styleLeft = "lg:flex text-start lg:w-[50%] p-4 sm:p-12 lg:border-r lg:border-t text-xl sm:text-4xl"
+const styleRight = "text-start lg:w-[50%] p-4 sm:p-12 lg:border-t text-xl sm:text-4xl"
+---
+<section id="portfolio">
+    <Subtitle
+        icon="(!)" 
+        title="<portfolio>" 
+        text="...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis ullamcorper arcu."
+    />
+    <section class="lg:flex">
+        <div class={styleLeft}>
+            <Project 
+                image="https://websitedemos.net/web-developer-portfolio-04/wp-content/uploads/sites/1212/2023/03/work-07.jpg"
+                title="{ hola }"
+                text={text}
+            />
+            <Project 
+                image="https://websitedemos.net/web-developer-portfolio-04/wp-content/uploads/sites/1212/2023/03/work-04.jpg"
+                title="{ hola2 }"
+                text={text}
+            />
+            
+        </div>
+        <div class={styleRight}>
+            <Project 
+                image="https://cdn.dribbble.com/users/2492784/screenshots/9165657/media/7c0febeb919e33c4161283046de327eb.png"
+                title="{ portfolio }"
+                text={text}
+            />
+        </div>
+    </section>
+    <section class="lg:flex border-b">
+        <div class={styleLeft}>
+            <Project 
+                image="https://websitedemos.net/web-developer-portfolio-04/wp-content/uploads/sites/1212/2023/03/work-07.jpg"
+                title="{ hola }"
+                text={text}
+            />
+            <Project 
+                image="https://websitedemos.net/web-developer-portfolio-04/wp-content/uploads/sites/1212/2023/03/work-04.jpg"
+                title="{ hola2 }"
+                text={text}
+            />
+            
+        </div>
+        <div class={styleRight}>
+            <Project 
+                image="https://websitedemos.net/web-developer-portfolio-04/wp-content/uploads/sites/1212/2023/03/work-04.jpg"
+                title="{ hola2 }"
+                text={text}
+            />
+        </div>
+    </section>
+    
+</section>

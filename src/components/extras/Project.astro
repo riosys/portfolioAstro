@@ -1,0 +1,9 @@
+---
+const {image, title, text} = Astro.props
+---
+
+<div class="mx-4 border-b lg:border-none">
+    <img src={image} alt="project">
+    <p class="my-4 text-4xl"><span>{title}</span></p>
+    <p class="text-lg text-red-600">{text}</p>
+</div>
