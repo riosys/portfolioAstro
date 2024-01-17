@@ -1,0 +1,19 @@
+---
+import Button from "./extras/Button.astro";
+import Subtitle from "./extras/Subtitle.astro";
+---
+
+
+<section>
+    <Subtitle 
+        icon="{*}" 
+        title="<contact_me>" 
+        text="Thank you for visiting my portfolio. I'm available for collaborations and freelance opportunities. For any inquiries, please use the contact form below. Looking forward to your message."
+    />
+    <form action="" class="flex flex-col w-4/6 m-auto">
+        <input placeholder="_name*" type="text" id="name" class="text-red-400 outline-none p-[4px] bg-transparent border-b border-red-400 placeholder-red-400 text-xl mb-14">
+        <input placeholder="_email*" type="text" id="email" class="text-red-400 outline-none p-[4px] bg-transparent border-b border-red-400 placeholder-red-400 text-xl mb-14">
+        <textarea placeholder="_message*" name="message" id="message" cols="30" rows="5" class="text-red-400 outline-none p-[4px] bg-transparent border-b border-red-400 placeholder-red-400 text-xl mb-8"></textarea>
+        <Button text="{send}"/>
+    </form>
+</section>

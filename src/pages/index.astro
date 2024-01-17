@@ -3,22 +3,31 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Home from "../components/Home.astro";
 import About from "../components/About.astro";
-import Portfolio from "../components/Portfolio.astro";
+import Porfolio from "../components/Porfolio.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<Layout title="Armando Rios - Porfolio">
+<Layout title="Armando Rios - Fullstack Developer">
     <main>
         <!-- <body class="bg-[#101010] text-white font-rios sm:mx-14"> -->
         <Header />
         <Home />
         <About />
-        <Portfolio/>
-        
-        
+        <Porfolio/>
         <div
             id="numbers"
             class="hidden lg:inline-block fixed top-0 left-0 text-xl text-end m-1"
         >
         </div>
+        <Contact/>
     </main>
+    <footer class="flex text-2xl justify-between p-6 mt-36 border-t">
+        <a href="">flesha</a>
+        <div class="flex text-center gap-10">
+            <p>F</p>
+            <p>T</p>
+            <p>I</p>
+        </div>
+        <p>By R105</p>
+    </footer>
 </Layout>
